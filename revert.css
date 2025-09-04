@@ -1,0 +1,281 @@
+/* ### Revert theme ### */
+
+:root {
+  /* Base sizing variables */
+  --guildbar-avatar-size: 48px;
+  --blob-scale: 48;
+  --guildbar-folder-size: var(--guildbar-avatar-size);
+  --folder-blob-scale: var(--blob-scale);
+  --custom-guild-list-padding: 12px;
+  --custom-guild-list-width: calc(max(var(--guildbar-avatar-size), var(--guildbar-folder-size)) + var(--custom-guild-list-padding) * 2);
+  --custom-app-top-bar-height: 23px;
+}
+
+/* Server list styling revert */
+nav[class*="guilds_"] {
+
+  /* #svg-mask-squircle */
+  defs>path {
+    d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
+  }
+
+  /* Guild sizing */
+  defs,
+  [class*="blobContainer_"],
+  [class*="listItemWrapper__"],
+  [class*="wrapper_"]:not([class*="listItem__"] > [class*="wrapper_"]),
+  svg[class*="placeholderMask__"],
+  svg:not([class*="placeholderMask__"])>foreignObject {
+    width: var(--guildbar-avatar-size) !important;
+    height: var(--guildbar-avatar-size) !important;
+  }
+
+  /* Guild drag & drop */
+  [class*="dragInner__"] {
+    width: 40px;
+    height: 40px;
+  }
+
+  [class*="dragOver_"] {
+    top: calc(var(--guildbar-avatar-size) / 2 + 8px)
+  }
+
+  /* Guild icon sizing */
+  [class*="childWrapper__"]>svg {
+    width: calc(var(--guildbar-avatar-size) - 18px);
+    height: calc(var(--guildbar-avatar-size) - 18px);
+  }
+
+  /* Border radius transitions */
+  [class*="childWrapper__"],
+  [class*="childWrapper__"] img,
+  [class*="icon_"],
+  [class*="circleIconButton__"] {
+    border-radius: 50% !important;
+    transition: border-radius 150ms linear;
+  }
+
+  /* Selected state */
+  [class*="selected__"] {
+
+    [class*="childWrapper__"],
+    [class*="childWrapper__"] img,
+    [class*="icon_"],
+    &[class*="circleIconButton__"] {
+      border-radius: 27% !important;
+    }
+  }
+
+  /* SVG positioning */
+  [class*="shiftSVG_"] {
+    top: 0;
+    left: 0;
+
+    foreignObject {
+      transform: translate(-4px, -4px);
+    }
+  }
+
+  /* Badge positioning */
+  mask {
+    --badge-offset: calc(var(--guildbar-avatar-size) - 40px);
+
+    &:not([class*="folderHeader__"] mask) {
+      use[href$="-lower_badge_masks"] {
+        translate: var(--badge-offset) var(--badge-offset);
+      }
+
+      use[href$="-upper_badge_masks"] {
+        translate: var(--badge-offset);
+      }
+    }
+
+    use[href$="-blob_mask"] {
+      scale: var(--blob-scale);
+    }
+  }
+
+  /* Folder styling */
+  [class*="folderPreviewWrapper__"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    [class*="folderPreview__"] {
+      width: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
+      height: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
+    }
+  }
+
+  [class*="iconSizeMini_"] {
+    width: calc(var(--guildbar-folder-size) / 3);
+    height: calc(var(--guildbar-folder-size) / 3);
+
+    [class*="acronym_"] {
+      line-height: calc(var(--guildbar-folder-size) / 3);
+    }
+
+    &[style*="font-size: 12px;"] {
+      font-size: 10px !important;
+    }
+
+    &[style*="font-size: 10px;"] {
+      font-size: 7px !important;
+    }
+
+    &[style*="font-size: 8px;"] {
+      font-size: 6px !important;
+    }
+  }
+
+  [class*="folderButton__"] {
+    overflow: visible;
+  }
+
+  [class*="folderHeader__"] {
+    --guildbar-avatar-size: var(--guildbar-folder-size);
+  }
+
+  [class*="folderIcon__"] {
+    background-color: var(--bg-mod-subtle);
+
+    svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+
+  #guild-list-unread-dms>div {
+    height: var(--guildbar-avatar-size) !important;
+  }
+}
+
+/* Expanded folder styling */
+[class*="isExpanded__"] {
+  [class*="stack_"] {
+    height: auto !important;
+  }
+}
+
+/* Hide Help button and DM divider */
+.sectionDivider__35e86,
+.trailing_c38106>a {
+  display: none !important;
+}
+
+/* Channel header container */
+.privateChannelsHeaderContainer__99e7c {
+  margin-top: 6px;
+}
+
+/* Message styling */
+.markup__75297,
+[class*="messageContent"],
+[class*="message-content"] {
+  color: white !important;
+}
+
+/* Top bar styling */
+.bar_c38106 {
+  padding: 0 12px 0 !important;
+  height: 65px;
+  margin-top: -33px;
+}
+
+.bar_c38106 .title_c38106 {
+  text-align: start;
+  display: block;
+  position: absolute;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  transform: translateY(40px) translateX(12px) scale(1.01);
+  width: 52px;
+
+  .text-sm\/medium_cf4812,
+  svg,
+  .guildIcon__85643 {
+    display: none;
+  }
+}
+
+/* Top bar trailing elements */
+.bar_c38106 .trailing_c38106 {
+  top: 51px;
+  gap: 8px;
+  z-index: 102;
+
+  .iconWrapper__9293f {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+
+    .icon__9293f {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+/* Window buttons */
+.winButtons_c38106 {
+  position: absolute;
+  gap: unset;
+  justify-content: center;
+  bottom: 43px;
+  left: -50px;
+  z-index: 3001;
+  -webkit-app-region: no-drag !important;
+
+  .winButton_c38106 {
+    align-items: center;
+    width: 28px;
+    height: 23px;
+  }
+}
+
+.winButtonsWithDivider_c38106:before {
+  border: unset;
+}
+
+/* Toolbar spacing */
+.toolbar__9293f {
+  padding-right: 45px;
+}
+
+/* ### Other stuff, comment to disable ### */
+
+/* Hide various elements */
+
+/* This removes the app launcher button in the chat bar */
+.channelAppLauncher_e6e74f,
+.buttonContainer_e6e74f,
+.app-launcher-entrypoint {
+  display: none;
+}
+
+/* This removes the "Nitro send a gift" button in the chat */
+.button__74017.button__24af7[aria-label="Send a gift"] {
+  display: none;
+}
+
+/* Remove rounded corners for media elements */
+[class*="embedImage"],
+[class*="embedVideo"],
+[class*="embedMedia"],
+[class*="visualMediaItemContainer_"],
+[class*="oneByOneGrid"],
+[class*="imageWrapper"],
+[class*="mosaicItem"],
+[class*="video"],
+[class*="loadingOverlay_"],
+[class*="embed_"]:not([class*="embedImage_"]),
+[class*="embed_"]:not([class*="embedVideo_"]),
+[class*="embed_"]:not([class*="embedThumbnail_"]),
+[class*="embed_"]:not([class*="embedMedia_"]) {
+  border-radius: 0 !important;
+}
+
+/* Force "Today at" timestamp */
+span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
+  content: "Today at ";
+}
