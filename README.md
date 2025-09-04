@@ -17,12 +17,28 @@ Revert Discord is a custom CSS theme that modifies Discord to restore elements f
 
 ## Installation
 
-To use this theme with Discord:
+To use this theme with Discord, first install a client mod that supports custom CSS (like [Vencord](https://vencord.dev/)).
 
-1. Install a browser extension that allows custom CSS (like Vencord)
-2. Copy the contents of `revert.css` into your CSS injector
-3. Enjoy your reverted Discord experience!
+### Option 1: Import from GitHub
+
+Add this line to your custom CSS:
+
+```css
+@import url("https://constrat.github.io/revert-discord/revert.css");
+```
+
+### Option 2: Manual Installation
+
+1. Download the `revert.css` file from this repository
+2. Copy the entire contents of the file
+3. Paste the contents into your client mod's custom CSS section
+
 
 ## Customization
 
-You can customize some aspects of the theme by modifying the CSS at the bottom of `revert.css`
+Customization is only possible when using Option 2 (Manual Installation). When importing from GitHub, you'll always get the default version.
+
+You can customize aspects of the theme by:
+
+1. Following Option 2 to install the CSS locally
+2. Commenting the CSS rulesets at the bottom of the file:
