@@ -6,7 +6,7 @@ A custom CSS theme that reverts Discord's interface to a more classic appearance
 
 ## Overview
 
-Revert Discord is a custom CSS theme that modifies Discord's user interface to restore classic elements and styling.
+Revert Discord is a custom CSS theme that modifies Discord to restore elements from before the April 2025 changes.
 
 - Modified server list sizing and positioning
 - Adjusted folder styling and previews
