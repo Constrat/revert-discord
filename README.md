@@ -29,10 +29,8 @@ Add this line to your custom CSS:
 
 ### Option 2: Manual Installation
 
-1. Download the `revert.css` file from this repository
-2. Copy the entire contents of the file
-3. Paste the contents into your client mod's custom CSS section
-
+1. Copy the entirety of https://constrat.github.io/revert-discord/revert.css
+2. Paste the contents into your client mod's custom CSS section
 
 ## Customization
 
