@@ -17,10 +17,9 @@ Revert Discord is a custom CSS theme that modifies Discord's user interface to r
 
 To use this theme with Discord:
 
-1. Install a browser extension that allows custom CSS (like Stylus for web Discord)
-2. For desktop Discord, use a client mod that supports CSS themes
-3. Copy the contents of `revert.css` into your CSS injector
-4. Enjoy your reverted Discord experience!
+1. Install a browser extension that allows custom CSS (like Vencord)
+2. Copy the contents of `revert.css` into your CSS injector
+3. Enjoy your reverted Discord experience!
 
 ## Customization
 
