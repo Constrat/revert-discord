@@ -198,6 +198,10 @@ nav[class*="guilds_"] {
   }
 }
 
+.inner_c0bea0 {
+    z-index: 103;
+}
+
 /* Top bar trailing elements */
 .bar_c38106 .trailing_c38106 {
   top: 51px;
@@ -279,3 +283,4 @@ nav[class*="guilds_"] {
 span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
   content: "Today at ";
 }
+
