@@ -176,6 +176,10 @@ nav[class*="guilds_"] {
 }
 
 /* Top bar styling */
+.title_bb0d86 {
+  display: none;
+}
+
 .bar_c38106 {
   padding: 0 12px 0 !important;
   height: 65px;
@@ -225,7 +229,7 @@ nav[class*="guilds_"] {
   position: absolute;
   gap: unset;
   justify-content: center;
-  bottom: 43px;
+  bottom: 44px;
   left: -50px;
   z-index: 3001;
   -webkit-app-region: no-drag !important;
