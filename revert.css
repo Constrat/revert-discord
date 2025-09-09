@@ -229,8 +229,8 @@ nav[class*="guilds_"] {
   position: absolute;
   gap: unset;
   justify-content: center;
-  bottom: 44px;
-  left: -50px;
+  bottom: 41px;
+  left: -44px;
   z-index: 3001;
   -webkit-app-region: no-drag !important;
 
