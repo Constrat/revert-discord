@@ -230,7 +230,7 @@ nav[class*="guilds_"] {
   gap: unset;
   justify-content: center;
   bottom: 41px;
-  left: -44px;
+  left: -48px;
   z-index: 3001;
   -webkit-app-region: no-drag !important;
 
@@ -245,9 +245,19 @@ nav[class*="guilds_"] {
   border: unset;
 }
 
+.backForwardButtons__63abb {
+  display: none;
+}
+
 /* Toolbar spacing */
 .toolbar__9293f {
   padding-right: 45px;
+}
+
+/* Server tab emoji move down */
+.wrapper__4e6ce.categoryList_c0e32c {
+  position: absolute;
+  top: 56px;
 }
 
 /* ### Other stuff, comment to disable ### */
@@ -286,4 +296,9 @@ nav[class*="guilds_"] {
 /* Force "Today at" timestamp */
 span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
   content: "Today at ";
+}
+
+/* Top Emojis in server */
+.categorySection_c656ac.categorySectionCollapsed_c656ac {
+  display: none;
 }
