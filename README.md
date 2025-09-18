@@ -19,24 +19,59 @@ Revert Discord is a custom CSS theme that modifies Discord to restore elements f
 
 To use this theme with Discord, first install a client mod that supports custom CSS (like [Vencord](https://vencord.dev/)).
 
-### Option 1: Import from GitHub
+### Options with Automatic Updates
 
-Add this line to your custom CSS:
+These methods will automatically receive updates when the theme is updated:
+
+#### Option 1: Vencord Online Themes
+
+If you're using Vencord:
+
+1. Go to Vencord Settings → Themes → Online Themes
+2. Paste this URL in the "Online Themes" field:
+   ```
+   https://constrat.github.io/revert-discord/revert.css
+   ```
+
+#### Option 2: Theme File with Auto-Updates
+
+1. Download [revert.theme.css](https://github.com/constrat/revert-discord/raw/main/revert.theme.css)
+2. Save it to your client mod's themes folder:
+   - Windows: `C:\Users\YourUsername\AppData\Roaming\Vencord\themes\`
+   - macOS: `~/Library/Application Support/Vencord/themes/`
+   - Linux: `~/.config/Vencord/themes/`
+3. Enable the theme in your client mod's settings
+
+This option uses a theme file that imports the online version, so you get automatic updates.
+
+#### Option 3: Quick CSS Import
+
+Add this line to your client mod's Quick CSS:
 
 ```css
 @import url("https://constrat.github.io/revert-discord/revert.css");
 ```
 
-### Option 2: Manual Installation
+### Options without Automatic Updates
 
-1. Copy the entirety of https://constrat.github.io/revert-discord/revert.css
+These methods require manually updating the theme when changes are made:
+
+#### Option 4: Manual CSS Installation
+
+1. Copy the entirety of [revert.css](https://constrat.github.io/revert-discord/revert.css)
 2. Paste the contents into your client mod's custom CSS section
+3. **Note:** This method allows for customization but will not receive automatic updates
 
 ## Customization
 
-Customization is only possible when using Option 2 (Manual Installation). When importing from GitHub, you'll always get the default version.
+Customization is only possible when using Option 4 (Manual CSS Installation). All auto-updating options will always load the default version.
 
-You can customize aspects of the theme by:
+To customize the theme:
 
-1. Following Option 2 to install the CSS locally
-2. Commenting the CSS rulesets at the bottom of the file:
+1. Use Option 4 to copy the entire CSS code into your client mod
+2. Modify the CSS variables at the top of the file or comment out specific sections
+3. Example customizations:
+   - Adjust server icon sizes by changing `--guildbar-avatar-size` value
+   - Disable specific features by commenting out sections (like hiding Nitro gift button)
+
+Remember that customized versions will not receive automatic updates. You'll need to manually update your custom version when new features are released.
