@@ -1,3 +1,13 @@
+/**
+ * @name revert-discord
+ * @description Revert your discord theme to April 2025.
+ * @author Constrat
+ * @version 1.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/constrat/revert-discord
+ * @source https://github.com/constrat/revert-discord/blob/master/revert.css
+*/
+
 /* ### Revert theme ### */
 
 :root {
@@ -224,13 +234,30 @@ nav[class*="guilds_"] {
   }
 }
 
-/* Window buttons */
-.winButtons_c38106 {
+/* Window buttons - default state (without show_c38106) */
+.bar_c38106.systemBar_c38106.fixed_c38106:not(.show_c38106) .winButtons_c38106 {
   position: absolute;
   gap: unset;
   justify-content: center;
   bottom: 41px;
   left: -48px;
+  z-index: 3001;
+  -webkit-app-region: no-drag !important;
+
+  .winButton_c38106 {
+    align-items: center;
+    width: 28px;
+    height: 23px;
+  }
+}
+
+/* Window buttons - when show_c38106 is present */
+.bar_c38106.systemBar_c38106.fixed_c38106.show_c38106 .winButtons_c38106 {
+  position: absolute;
+  gap: unset;
+  justify-content: center;
+  bottom: 41px;
+  left: 0; /* Adjusted position when show_c38106 is present */
   z-index: 3001;
   -webkit-app-region: no-drag !important;
 
