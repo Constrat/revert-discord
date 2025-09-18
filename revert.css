@@ -233,21 +233,26 @@ nav[class*="guilds_"] {
   }
 }
 
-/* Window buttons */
+/* Window buttons - default state */
 .winButtons_c38106 {
-  position: absolute;
-  gap: unset;
-  justify-content: center;
-  bottom: 41px;
-  left: -48px;
-  z-index: 3001;
+  position: absolute !important;
+  gap: unset !important;
+  bottom: 39px !important;
+  left: -48px !important;
+  z-index: 3001 !important;
   -webkit-app-region: no-drag !important;
+}
 
-  .winButton_c38106 {
-    align-items: center;
-    width: 28px;
-    height: 23px;
-  }
+/* Special handling when in settings */
+div[class*="show_c38106"] .winButtons_c38106 {
+  bottom: 27px !important;
+  left: -72px !important;
+}
+
+.winButtons_c38106 .winButton_c38106 {
+  align-items: center !important;
+  width: 28px !important;
+  height: 24px !important;
 }
 
 .winButtonsWithDivider_c38106:before {
