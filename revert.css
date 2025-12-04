@@ -316,3 +316,8 @@ span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
 .categorySection_c656ac.categorySectionCollapsed_c656ac {
   display: none;
 }
+
+/* Remove discord checkpoint (discord wrapped?)*/
+div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f {
+    display: none;
+}
