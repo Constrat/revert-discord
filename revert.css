@@ -102,39 +102,6 @@ nav[class*="5e434347c823b592-guilds"] {
     }
   }
 
-  /* Folder styling */
-  [class*="folderPreviewWrapper__"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    [class*="folderPreview__"] {
-      width: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
-      height: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
-    }
-  }
-
-  [class*="iconSizeMini_"] {
-    width: calc(var(--guildbar-folder-size) / 3);
-    height: calc(var(--guildbar-folder-size) / 3);
-
-    [class*="acronym_"] {
-      line-height: calc(var(--guildbar-folder-size) / 3);
-    }
-
-    &[style*="font-size: 12px;"] {
-      font-size: 10px !important;
-    }
-
-    &[style*="font-size: 10px;"] {
-      font-size: 7px !important;
-    }
-
-    &[style*="font-size: 8px;"] {
-      font-size: 6px !important;
-    }
-  }
-
   [class*="folderButton"] {
     overflow: visible;
   }
@@ -198,9 +165,9 @@ nav[class*="5e434347c823b592-guilds"] {
   transform: translateY(40px) translateX(12px) scale(1.01);
   width: 52px;
 
-  .text-sm\/medium_cf4812,
+  .text-sm\/medium,
   svg,
-  .guildIcon__85643 {
+  .guildIcon {
     display: none;
   }
 }
@@ -288,23 +255,24 @@ div[class*="c38106a3f0c3ca76-show"] .c38106a3f0c3ca76-winButtons {
 [class*="embedImage"],
 [class*="embedVideo"],
 [class*="embedMedia"],
-[class*="visualMediaItemContainer_"],
+[class*="visualMediaItemContainer"],
 [class*="oneByOneGrid"],
 [class*="imageWrapper"],
 [class*="mosaicItem"],
 [class*="video"],
-[class*="loadingOverlay_"],
-[class*="embed_"]:not([class*="embedImage_"]),
-[class*="embed_"]:not([class*="embedVideo_"]),
-[class*="embed_"]:not([class*="embedThumbnail_"]),
-[class*="embed_"]:not([class*="embedMedia_"]) {
+[class*="loadingOverlay"],
+[class*="embed"]:not([class*="embedImage"]),
+[class*="embed"]:not([class*="embedVideo"]),
+[class*="embed"]:not([class*="embedThumbnail"]),
+[class*="embed"]:not([class*="embedMedia"]) {
   border-radius: 0 !important;
 }
 
 /* Force "Today at" timestamp */
-span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
+/* Doesn't work */
+/* span[class*="timestampInline"]>[aria-label^="Today at"]::before {
   content: "Today at ";
-}
+} */
 
 /* Top Emojis in server */
 .c656aca9a3db31a9-categorySection.c656aca9a3db31a9-categorySectionCollapsed {
