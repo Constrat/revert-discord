@@ -1,4 +1,4 @@
-# Revert Discord
+# [Revert Discord](https://github.com/Constrat/revert-discord)
 
 A custom CSS theme that reverts Discord's interface to a more classic appearance.
 
