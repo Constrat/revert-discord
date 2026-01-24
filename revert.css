@@ -128,35 +128,35 @@ nav[class*="5e434347c823b592-guilds"] {
 }
 
 /* Hide Help button and DM divider */
-.e6b7699ce8339e1c-sectionDivider,
-.c38106a3f0c3ca76-trailing>a {
+.sectionDivider_e6b769,
+.trailing_c38106>a {
   display: none !important;
 }
 
 /* Channel header container */
-._99e7cad8d4c55236-privateChannelsHeaderContainer {
+.privateChannelsHeaderContainer__99e7c {
   margin-top: 6px;
 }
 
 /* Message styling */
-._1b31f471f0bb10ab-editor,
+.editor__1b31f,
 [class*="messageContent"],
 [class*="message-content"] {
   color: white !important;
 }
 
 /* Top bar styling */
-.edbb22df99c39831-title {
+.title_edbb22 {
   display: none;
 }
 
-.c38106a3f0c3ca76-bar {
+.bar_c38106 {
   padding: 0 12px 0 !important;
   height: 65px;
   margin-top: -33px;
 }
 
-.c38106a3f0c3ca76-bar .c38106a3f0c3ca76-title {
+.bar_c38106 .title_c38106 {
   text-align: start;
   display: block;
   position: absolute;
@@ -172,22 +172,22 @@ nav[class*="5e434347c823b592-guilds"] {
   }
 }
 
-.c0bea05627c5dc35-inner {
+.inner_c0bea0 {
   z-index: 103;
 }
 
 /* Top bar trailing elements */
-.c38106a3f0c3ca76-bar .c38106a3f0c3ca76-trailing {
+.bar_c38106 .trailing_c38106 {
   top: 51px;
   gap: 8px;
   z-index: 102;
 
-  ._9293f6b2fc12398a-iconWrapper {
+  .iconWrapper__9293f {
     width: 30px;
     height: 30px;
     border-radius: 4px;
 
-    ._9293f6b2fc12398a-icon {
+    .icon__9293f {
       width: 24px;
       height: 24px;
     }
@@ -195,7 +195,7 @@ nav[class*="5e434347c823b592-guilds"] {
 }
 
 /* Window buttons - default state */
-.c38106a3f0c3ca76-winButtons {
+.winButtons_c38106 {
   position: absolute !important;
   gap: unset !important;
   bottom: 39px !important;
@@ -205,32 +205,32 @@ nav[class*="5e434347c823b592-guilds"] {
 }
 
 /* Special handling when in settings */
-div[class*="c38106a3f0c3ca76-show"] .c38106a3f0c3ca76-winButtons {
+div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
   bottom: 27px !important;
   left: -72px !important;
 }
 
-.c38106a3f0c3ca76-winButtons .c38106a3f0c3ca76-winButton {
+.winButtons_c38106 .winButton_c38106 {
   align-items: center !important;
   width: 28px !important;
   height: 24px !important;
 }
 
-.c38106a3f0c3ca76-winButtonsWithDivider:before {
+.winButtonsWithDivider_c38106:before {
   border: unset;
 }
 
-._63abbca6d53b6035-backForwardButtons {
+.backForwardButtons__63abb {
   display: none;
 }
 
 /* Toolbar spacing */
-._9293f6b2fc12398a-toolbar {
+.toolbar__9293f {
   padding-right: 45px;
 }
 
 /* Server tab emoji move down */
-._4106ae7c1472c1de-wrapper.c0e32c5cffed3d9f-categoryList {
+.wrapper__4106a.categoryList_c0e32c {
   position: absolute;
   top: 56px;
 }
@@ -241,13 +241,13 @@ div[class*="c38106a3f0c3ca76-show"] .c38106a3f0c3ca76-winButtons {
 
 /* This removes the app launcher button in the chat bar */
 .channelAppLauncher_e6e74f,
-.e6e74fd4d1221f53-buttonContainer,
+.buttonContainer_e6e74f,
 .app-launcher-entrypoint {
   display: none;
 }
 
 /* This removes the "Nitro send a gift" button in the chat */
-._740174f3d6a2c8fe-button._24af7f4d0326ba4f-button[aria-label="Send a gift"] {
+.button__74017.button__24af7[aria-label="Send a gift"] {
   display: none;
 }
 
@@ -275,11 +275,11 @@ div[class*="c38106a3f0c3ca76-show"] .c38106a3f0c3ca76-winButtons {
 } */
 
 /* Top Emojis in server */
-.c656aca9a3db31a9-categorySection.c656aca9a3db31a9-categorySectionCollapsed {
+.categorySection_c656ac.categorySectionCollapsed_c656ac {
   display: none;
 }
 
 /* Remove discord checkpoint (discord wrapped?)*/
-div._85643a485899904b-button._85643a485899904b-smallButton._9293f6b2fc12398a-iconWrapper._9293f6b2fc12398a-clickable {
+div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f {
     display: none;
 }
