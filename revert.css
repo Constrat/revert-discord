@@ -192,7 +192,7 @@ nav[class*="guilds_"] {
 .bar_c38106 {
   padding: 0 12px 0 !important;
   height: 65px;
-  margin-top: -33px;
+  margin-top: -32px;
 }
 
 .bar_c38106 .title_c38106 {
@@ -217,8 +217,8 @@ nav[class*="guilds_"] {
 
 /* Top bar trailing elements */
 .bar_c38106 .trailing_c38106 {
-  top: 51px;
-  gap: 8px;
+  top: 50px;
+  gap: 0px;
   z-index: 102;
 
   .iconWrapper__9293f {
