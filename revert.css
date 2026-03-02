@@ -322,3 +322,8 @@ div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
 div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f {
     display: none;
 }
+
+/* Remvoe experiment icon */
+.button__85643.iconWrapper__9293f.clickable__9293f {
+    display: none;
+}
