@@ -14,9 +14,7 @@
   --guildbar-avatar-size: 48px;
   --blob-scale: 48;
   --guildbar-folder-size: var(--guildbar-avatar-size);
-  --folder-blob-scale: var(--blob-scale);
   --custom-guild-list-padding: 12px;
-  --custom-guild-list-width: calc(max(var(--guildbar-avatar-size), var(--guildbar-folder-size)) + var(--custom-guild-list-padding) * 2);
   --custom-app-top-bar-height: 23px;
 }
 
@@ -100,7 +98,7 @@ nav[class*="guilds_"] {
     }
 
     use[href$="-blob_mask"] {
-      scale: var(--blob-scale);
+      scale: 48;
     }
   }
 
