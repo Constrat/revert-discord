@@ -283,8 +283,9 @@ div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
   display: none;
 }
 
-/* This removes the "Nitro send a gift" button in the chat */
-.button__74017.button__24af7[aria-label="Send a gift"] {
+/* This removes the "Nitro send a gift" button in the chat AND DMs*/
+.button__74017.button__24af7[aria-label="Send a gift"],
+.button__74017.button__24af7[aria-label="Give a Gift"] {
   display: none;
 }
 
