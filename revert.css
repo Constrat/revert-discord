@@ -164,17 +164,6 @@ nav[class*="guilds_"] {
   }
 }
 
-/* Hide Help button and DM divider */
-.sectionDivider_e6b769,
-.trailing_c38106>a {
-  display: none !important;
-}
-
-/* Channel header container */
-.privateChannelsHeaderContainer__99e7c {
-  margin-top: 6px;
-}
-
 /* Message styling */
 .editor__1b31f,
 [class*="messageContent"],
@@ -216,6 +205,7 @@ nav[class*="guilds_"] {
 /* Top bar trailing elements */
 .bar_c38106 .trailing_c38106 {
   top: 50px;
+  left: 6px;
   gap: 0px;
   z-index: 102;
 
@@ -236,16 +226,15 @@ nav[class*="guilds_"] {
   position: absolute !important;
   gap: unset !important;
   bottom: 39px !important;
-  left: -48px !important;
+  right: -6px !important;
   z-index: 3001 !important;
   -webkit-app-region: no-drag !important;
 }
 
 /* Special handling when in settings */
-div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
+div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106"] .winButtons_c38106 {
   bottom: 27px !important;
-  left: -72px !important;
-}
+} 
 
 .winButtons_c38106 .winButton_c38106 {
   align-items: center !important;
@@ -257,13 +246,23 @@ div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
   border: unset;
 }
 
+/* Hide Help button and DM divider */
+.trailing_c38106>a {
+  display: none !important;
+}
+
+/* Hide the devtools menu */
+.clickable__81391[aria-label="DevTools"] {
+  display: none !important;
+}
+
 .backForwardButtons__63abb {
   display: none;
 }
 
 /* Toolbar spacing */
 .toolbar__9293f {
-  padding-right: 45px;
+  padding-right: 24px;
 }
 
 /* Server tab emoji move down */
@@ -319,10 +318,10 @@ div[class*="c38106a3f0c3ca76-show"] .winButtons_c38106 {
 
 /* Remove discord checkpoint (discord wrapped?)*/
 div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f {
-    display: none;
+  display: none;
 }
 
 /* Remvoe experiment icon */
 .button__85643.iconWrapper__9293f.clickable__9293f {
-    display: none;
+  display: none;
 }
