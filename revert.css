@@ -207,18 +207,14 @@ nav[class*="guilds_"] {
   top: 50px;
   left: 6px;
   gap: 0px;
-  z-index: 102;
-
-  .iconWrapper__9293f {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-
-    .icon__9293f {
-      width: 24px;
-      height: 24px;
-    }
+  z-index: 104;
+  .clickable__81391 {
+    top: 1px;
   }
+}
+
+body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
+  left: -481px;
 }
 
 /* Window buttons - default state */
