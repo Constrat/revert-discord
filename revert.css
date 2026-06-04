@@ -206,7 +206,7 @@ nav[class*="guilds_"] {
 .bar_c38106 .trailing_c38106 {
   top: 50px;
   left: 6px;
-  gap: 0px;
+  gap: 0;
   z-index: 104;
   .clickable__81391 {
     top: 1px;
@@ -227,12 +227,8 @@ body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
   -webkit-app-region: no-drag !important;
 }
 
-/* Special handling when in user settings */
-div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106"] .winButtons_c38106 {
-  bottom: 27px !important;
-} 
-
-/* Special handling when in server settings */
+/* Special handling when in settings */
+div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106"] .winButtons_c38106,
 div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEvents_c38106"] .winButtons_c38106 {
   bottom: 27px !important;
 }
