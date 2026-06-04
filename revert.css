@@ -198,23 +198,30 @@ nav[class*="guilds_"] {
   }
 }
 
-.inner_c0bea0 {
-  z-index: 103;
-}
-
 /* Top bar trailing elements */
 .bar_c38106 .trailing_c38106 {
   top: 50px;
   left: 6px;
   gap: 0;
   z-index: 104;
+
   .clickable__81391 {
     top: 1px;
   }
 }
 
+.inner_c0bea0 {
+  z-index: 104;
+}
+
 body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
   left: -481px;
+}
+
+.chat_f75fb0.chat__0b563,
+.container__89463,
+.chat_f75fb0.page_c791b2 {
+  z-index: 104;
 }
 
 /* Window buttons - default state */
