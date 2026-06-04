@@ -231,10 +231,15 @@ nav[class*="guilds_"] {
   -webkit-app-region: no-drag !important;
 }
 
-/* Special handling when in settings */
+/* Special handling when in user settings */
 div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106"] .winButtons_c38106 {
   bottom: 27px !important;
 } 
+
+/* Special handling when in server settings */
+div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEvents_c38106"] .winButtons_c38106 {
+  bottom: 27px !important;
+}
 
 .winButtons_c38106 .winButton_c38106 {
   align-items: center !important;
