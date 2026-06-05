@@ -218,6 +218,10 @@ body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
   left: -481px;
 }
 
+body:has(.notice__6e2b9.notice_c9e42f.colorBrand__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391{
+  top: 41.5px;
+}
+
 .chat_f75fb0.chat__0b563,
 .container__89463,
 .chat_f75fb0.page_c791b2 {
