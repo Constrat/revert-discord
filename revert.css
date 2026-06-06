@@ -244,6 +244,14 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
   bottom: 27px !important;
 }
 
+.bar_c38106.theme-dark.images-dark.titleBar__0bd4a {
+  height: 58px !important;
+}
+
+.popout__0bd4a .winButtons_c38106 {
+  bottom: 22px !important;
+}
+
 .winButtons_c38106 .winButton_c38106 {
   align-items: center !important;
   width: 28px !important;
