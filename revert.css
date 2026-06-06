@@ -214,18 +214,19 @@ nav[class*="guilds_"] {
   z-index: 104;
 }
 
-body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
-  left: -481px;
-}
-
-body:has(.notice__6e2b9.notice_c9e42f.colorBrand__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391{
-  top: 41.5px;
-}
-
+/* z-index stacking */
 .chat_f75fb0.chat__0b563,
 .container__89463,
 .chat_f75fb0.page_c791b2 {
   z-index: 104;
+}
+
+body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
+  left: -481px;
+}
+
+body:has(.notice__6e2b9.notice_c9e42f.colorBrand__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391 {
+  top: 41.5px;
 }
 
 /* Window buttons - default state */
@@ -263,15 +264,9 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
 }
 
 /* Hide Help button and DM divider */
-.trailing_c38106>a {
-  display: none !important;
-}
-
+.trailing_c38106>a,
 /* Hide the devtools menu */
-.clickable__81391[aria-label="DevTools"] {
-  display: none !important;
-}
-
+.clickable__81391[aria-label="DevTools"],
 .backForwardButtons__63abb {
   display: none;
 }
@@ -294,10 +289,7 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
 /* This removes the app launcher button in the chat bar */
 .channelAppLauncher_e6e74f,
 .buttonContainer_e6e74f,
-.app-launcher-entrypoint {
-  display: none;
-}
-
+.app-launcher-entrypoint,
 /* This removes the "Nitro send a gift" button in the chat AND DMs*/
 .button__74017.button__24af7[aria-label="Send a gift"],
 .button__74017.button__24af7[aria-label="Give a Gift"] {
@@ -333,11 +325,8 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
 }
 
 /* Remove discord checkpoint (discord wrapped?)*/
-div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f {
-  display: none;
-}
-
 /* Remvoe experiment icon */
+div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f,
 .button__85643.iconWrapper__9293f.clickable__9293f {
   display: none;
 }
