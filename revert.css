@@ -229,6 +229,10 @@ body:has(.notice__6e2b9.notice_c9e42f.colorBrand__6e2b9) .bar_c38106 .trailing_c
   top: 41.5px;
 }
 
+body:has(.notice__6e2b9.colorWarning__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391{
+  top: 37px;
+}
+
 /* Window buttons - default state */
 .winButtons_c38106 {
   position: absolute !important;
