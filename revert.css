@@ -210,15 +210,29 @@ nav[class*="guilds_"] {
   }
 }
 
-.inner_c0bea0 {
-  z-index: 104;
+.sidebarList__5e434.sidebarListRounded__5e434 {
+    border-radius: 0 !important;
+}
+
+/* Hide Help button and DM divider */
+.trailing_c38106>a,
+/* Hide the devtools menu */
+.clickable__81391[aria-label="DevTools"],
+.backForwardButtons__63abb {
+  display: none;
+}
+
+/* Toolbar spacing */
+.toolbar__9293f {
+  padding-right: 24px;
 }
 
 /* z-index stacking */
 .chat_f75fb0.chat__0b563,
 .container__89463,
-.chat_f75fb0.page_c791b2 {
-  z-index: 104;
+.chat_f75fb0.page_c791b2,
+.inner_c0bea0 {
+    z-index: 104;
 }
 
 body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
@@ -269,19 +283,6 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
 
 .winButtonsWithDivider_c38106:before {
   border: unset;
-}
-
-/* Hide Help button and DM divider */
-.trailing_c38106>a,
-/* Hide the devtools menu */
-.clickable__81391[aria-label="DevTools"],
-.backForwardButtons__63abb {
-  display: none;
-}
-
-/* Toolbar spacing */
-.toolbar__9293f {
-  padding-right: 24px;
 }
 
 /* Server tab emoji move down */
