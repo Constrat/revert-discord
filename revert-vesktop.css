@@ -1,0 +1,303 @@
+/**
+ * @name revert-discord-vesktop
+ * @description Revert your discord theme to April 2025 for Vesktop.
+ * @author Constrat
+ * @version 1.0.0
+ * @website https://github.com/constrat/revert-discord
+ * @source https://github.com/constrat/revert-discord/blob/main/revert-vesktop.css
+*/
+
+/* ### Revert theme ### */
+
+:root {
+    /* Base sizing variables */
+    --guildbar-avatar-size: 48px;
+    --blob-scale: 48;
+    --guildbar-folder-size: var(--guildbar-avatar-size);
+    --custom-guild-list-padding: 12px;
+    --custom-app-top-bar-height: 23px;
+}
+
+/* Server list styling revert */
+nav[class*="guilds_"] {
+
+    /* #svg-mask-squircle */
+    defs>path {
+        d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
+    }
+
+    /* Guild sizing */
+    defs,
+    [class*="blobContainer_"],
+    [class*="listItemWrapper__"],
+    [class*="wrapper_"]:not([class*="listItem__"] > [class*="wrapper_"]),
+    svg[class*="placeholderMask__"],
+    svg:not([class*="placeholderMask__"])>foreignObject {
+        width: var(--guildbar-avatar-size) !important;
+        height: var(--guildbar-avatar-size) !important;
+    }
+
+    /* Guild drag & drop */
+    [class*="dragInner__"] {
+        width: 40px;
+        height: 40px;
+    }
+
+    [class*="dragOver_"] {
+        top: calc(var(--guildbar-avatar-size) / 2 + 8px);
+    }
+
+    /* Guild icon sizing */
+    [class*="wrapper__"]>svg {
+        width: calc(var(--guildbar-avatar-size) - 18px);
+        height: calc(var(--guildbar-avatar-size) - 18px);
+    }
+
+    /* Border radius transitions */
+    [class*="wrapper__"],
+    [class*="wrapper__"] img,
+    [class*="icon_"],
+    [class*="circleIconButton__"] {
+        border-radius: 50% !important;
+        transition: border-radius 150ms linear;
+    }
+
+    /* Selected state */
+    [class*="selected__"] {
+
+        [class*="wrapper__"],
+        [class*="wrapper__"] img,
+        [class*="icon_"],
+        &[class*="circleIconButton__"] {
+            border-radius: 27% !important;
+        }
+    }
+
+    /* SVG positioning */
+    [class*="shiftSVG_"] {
+        top: 0;
+        left: 0;
+
+        foreignObject {
+            transform: translate(-4px, -4px);
+        }
+    }
+
+    /* Badge positioning */
+    mask {
+        --badge-offset: calc(var(--guildbar-avatar-size) - 40px);
+
+        &:not([class*="folderHeader__"] mask) {
+            use[href$="-lower_badge_masks"] {
+                translate: var(--badge-offset) var(--badge-offset);
+            }
+
+            use[href$="-upper_badge_masks"] {
+                translate: var(--badge-offset);
+            }
+        }
+
+        use[href$="-blob_mask"] {
+            scale: 1.2;
+        }
+    }
+
+    /* Folder styling */
+    [class*="folderPreviewWrapper__"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        [class*="folderPreview__"] {
+            width: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
+            height: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
+        }
+    }
+
+    [class*="iconSizeMini_"] {
+        width: calc(var(--guildbar-folder-size) / 3);
+        height: calc(var(--guildbar-folder-size) / 3);
+
+        [class*="acronym_"] {
+            line-height: calc(var(--guildbar-folder-size) / 3);
+        }
+
+        &[style*="font-size: 12px;"] {
+            font-size: 10px !important;
+        }
+
+        &[style*="font-size: 10px;"] {
+            font-size: 7px !important;
+        }
+
+        &[style*="font-size: 8px;"] {
+            font-size: 6px !important;
+        }
+    }
+
+    [class*="folderButton__"] {
+        overflow: visible;
+    }
+
+    [class*="folderHeader__"] {
+        --guildbar-avatar-size: var(--guildbar-folder-size);
+    }
+
+    [class*="folderIcon__"] {
+        background-color: var(--bg-mod-subtle);
+
+        svg {
+            width: 24px !important;
+            height: 24px !important;
+        }
+    }
+
+    #guild-list-unread-dms>div {
+        height: var(--guildbar-avatar-size) !important;
+    }
+
+    /* Expanded folder styling */
+    [class*="isExpanded__"] {
+        [class*="stack_"] {
+            height: auto !important;
+        }
+    }
+}
+
+/* Message styling */
+.editor__1b31f,
+[class*="messageContent"],
+[class*="message-content"] {
+    color: white !important;
+}
+
+/* Top bar styling */
+.title_c38106 {
+    display: none;
+}
+
+.container__5e434 {
+    margin-top: -23px;
+    height: calc(100% + 23px);
+    z-index: 1;
+}
+
+/* Remove borders, box-shadows, and top corner rounding */
+.chat_f75fb0,
+.header_f37cb1,
+.sidebarList__5e434.sidebarListRounded__5e434 {
+    border-top: none !important;
+}
+
+.sidebarList__5e434.sidebarListRounded__5e434 {
+    border-radius: 0 !important;
+}
+
+.listItem__650eb:has(.guildSeparator__252b6) {
+    display: none !important;
+}
+
+.listItemWrapper__91816 .wrapper_cc5dd2 {
+    margin: 6px auto !important;
+}
+
+.title_f75fb0.theme-dark.images-dark.container__9293f.themed__9293f {
+    background-color: #202020 !important;
+}
+
+/* Top bar trailing elements */
+.bar_c38106 .trailing_c38106 {
+    top: 38px;
+    left: 6px;
+    gap: 0;
+    z-index: 104;
+
+    .clickable__81391 {
+        top: 1px;
+    }
+}
+
+/* Hide Help button and DM divider, DevTools button, and back/forward nav */
+.trailing_c38106>a,
+.clickable__81391[aria-label="DevTools"],
+.backForwardButtons__63abb {
+    display: none;
+}
+
+/* Toolbar spacing */
+.toolbar__9293f {
+    padding-right: 24px;
+}
+
+/* z-index stacking */
+.chat_f75fb0.chat__0b563,
+.container__89463,
+.chat_f75fb0.page_c791b2,
+.inner_c0bea0 {
+    z-index: 104;
+}
+
+body:has(.guildSidebar_f75fb0) .bar_c38106 .trailing_c38106 .clickable__81391 {
+    left: -481px;
+}
+
+body:has(.notice__6e2b9.notice_c9e42f.colorBrand__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391 {
+    top: 41.5px;
+}
+
+body:has(.notice__6e2b9.colorWarning__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391 {
+    top: 37px;
+}
+
+body:has(.notice__29487) .bar_c38106 .trailing_c38106 .clickable__81391 {
+    top: 54px;
+}
+
+/* ### Other stuff, comment to disable ### */
+
+/* Hide various elements */
+
+/* This removes the app launcher button in the chat bar */
+.channelAppLauncher_e6e74f,
+.buttonContainer_e6e74f,
+.app-launcher-entrypoint,
+/* This removes the "Nitro send a gift" button in the chat AND DMs*/
+.button__74017.button__24af7[aria-label="Send a gift"],
+.button__74017.button__24af7[aria-label="Give a Gift"] {
+    display: none;
+}
+
+/* Remove rounded corners for media elements */
+[class*="embedImage"],
+[class*="embedVideo"],
+[class*="embedMedia"],
+[class*="visualMediaItemContainer"],
+[class*="oneByOneGrid"],
+[class*="imageWrapper"],
+[class*="mosaicItem"],
+[class*="video"],
+[class*="loadingOverlay"],
+[class*="embed"]:not([class*="embedImage"]),
+[class*="embed"]:not([class*="embedVideo"]),
+[class*="embed"]:not([class*="embedThumbnail"]),
+[class*="embed"]:not([class*="embedMedia"]) {
+    border-radius: 0 !important;
+}
+
+/* Force "Today at" timestamp */
+/* Doesn't work */
+/* span[class*="timestampInline"]>[aria-label^="Today at"]::before {
+  content: "Today at ";
+} */
+
+/* Top Emojis in server */
+.categorySection_c656ac.categorySectionCollapsed_c656ac {
+    display: none;
+}
+
+/* Remove discord checkpoint (discord wrapped?)*/
+/* Remvoe experiment icon */
+div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f,
+.button__85643.iconWrapper__9293f.clickable__9293f {
+    display: none;
+}
