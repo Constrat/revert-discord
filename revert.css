@@ -291,6 +291,11 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
   top: 56px;
 }
 
+/* Revert new pinged message color */
+.iconBadge__9293f.iconBadgeBottom__9293f.iconBadgeStyleUnread__9293f {
+  background-color: #F04747 !important;
+}
+
 /* ### Other stuff, comment to disable ### */
 
 /* Hide various elements */
