@@ -251,6 +251,10 @@ body:has(.notice__29487) .bar_c38106 .trailing_c38106 .clickable__81391 {
   top: 54px;
 }
 
+body:has(.notice__6e2b9.colorDefault__6e2b9) .bar_c38106 .trailing_c38106 .clickable__81391 {
+  top: 37px;
+}
+
 /* Window buttons - default state */
 .winButtons_c38106 {
   position: absolute !important;
@@ -272,7 +276,7 @@ div[class="bar_c38106 systemBar_c38106 fixed_c38106 show_c38106 disablePointerEv
 }
 
 .popout__0bd4a .winButtons_c38106 {
-  bottom: 22px !important;
+  bottom: 18px !important;
 }
 
 .winButtons_c38106 .winButton_c38106 {
