@@ -349,3 +349,8 @@ div.button__85643.smallButton__85643.iconWrapper__9293f.clickable__9293f,
 .button__85643.iconWrapper__9293f.clickable__9293f {
   display: none;
 }
+
+/* Remove annoying ad quests */
+.wrapper__0d616.wrapperVisible__0d616 {
+  display: none;
+}
