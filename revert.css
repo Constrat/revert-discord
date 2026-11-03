@@ -15,40 +15,38 @@
   --guildbar-avatar-size: 48px;
   --blob-scale: 48;
   --guildbar-folder-size: var(--guildbar-avatar-size);
+  --folder-blob-scale: var(--blob-scale);
   --custom-guild-list-padding: 12px;
   --custom-app-top-bar-height: 23px;
+  --custom-guild-list-width: calc(max(var(--guildbar-avatar-size), var(--guildbar-folder-size)) + var(--custom-guild-list-padding) * 2);
 }
-
-
-/* ==========================================================================
-   Server list
-   ========================================================================== */
 
 nav[class*="guilds_"] {
 
-  /* ---- Guild sizing ---- */
   [class*="wrapper_"]:not([class*="listItem__"] > [class*="wrapper_"]),
   svg:not([class*="placeholderMask__"])>foreignObject {
     width: var(--guildbar-avatar-size) !important;
     height: var(--guildbar-avatar-size) !important;
   }
 
-  /* ---- Icon shape: round by default ---- */
-  [data-list-item-id^="guildsnav___"],
-  [data-list-item-id^="guildsnav___"]>img {
+  [class*="childWrapper__"],
+  [class*="childWrapper__"] img,
+  [class*="icon_"],
+  [class*="circleIconButton__"] {
     border-radius: 50% !important;
     transition: border-radius 150ms linear;
   }
 
-  /* ---- Icon shape: hovered or selected ---- */
-  [data-list-item-id^="guildsnav___"]:hover,
-  [data-list-item-id^="guildsnav___"]:hover>img,
-  [data-list-item-id^="guildsnav___"][aria-selected="true"],
-  [data-list-item-id^="guildsnav___"][aria-selected="true"]>img {
-    border-radius: 27% !important;
+  [class*="selected__"] {
+
+    [class*="childWrapper__"],
+    [class*="childWrapper__"] img,
+    [class*="icon_"],
+    &[class*="circleIconButton__"] {
+      border-radius: 27% !important;
+    }
   }
 
-  /* ---- SVG positioning ---- */
   [class*="shiftSVG_"] {
     top: 0;
     left: 0;
@@ -103,8 +101,10 @@ nav[class*="guilds_"] {
     }
   }
 
-  [class*="isExpanded__"] [class*="stack_"] {
-    height: auto !important;
+  [class*="isExpanded__"] {
+    [class*="stack_"] {
+      height: auto !important;
+    }
   }
 }
 
