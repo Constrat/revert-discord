@@ -56,16 +56,6 @@ nav[class*="guilds_"] {
     foreignObject {
       transform: translate(-4px, -4px);
     }
-  }
-
-  /* ---- SVG positioning ---- */
-  [class*="shiftSVG_"] {
-    top: 0;
-    left: 0;
-
-    foreignObject {
-      transform: translate(-4px, -4px);
-    }
 
     >mask {
       --badge-offset: calc(var(--guildbar-avatar-size) - 40px);
