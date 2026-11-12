@@ -105,6 +105,11 @@ nav[class*="guilds_"] {
     [class*="stack_"] {
       height: auto !important;
     }
+
+  }
+
+  #guild-list-unread-dms>div {
+    height: var(--guildbar-avatar-size) !important;
   }
 }
 
